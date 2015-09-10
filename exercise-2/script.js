@@ -6,11 +6,14 @@ function addTodoItem(event) {
   var li          = document.createElement("li");
   var label       = document.createElement("label");
   var checkbox    = document.createElement("input");
+  var deleteButton = document.createElement("button")
+  deleteButton.innerText = "Delete"
   checkbox.type   = "checkbox";
-  label.appendChild(checkbox)
+  label.appendChild(checkbox);
   label.appendChild(document.createTextNode(item.value));
-  li.appendChild(label)
-  todolist.appendChild(li);
+  li.appendChild(label);
+  todolist.appendChild(li)
+  li.appendChild(deleteButton);
   item.value = "";
 }
 
